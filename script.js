@@ -1,150 +1,99 @@
-// Mobile Menu Toggle
+// Mobile Menu
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
   hamburger.classList.toggle('active');
+  hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
 });
 
-// Close menu when clicking on a link
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('active');
     hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
   });
 });
 
-// Header scroll effect
-let lastScroll = 0;
+// Header shadow on scroll
 const header = document.querySelector('header');
-
 window.addEventListener('scroll', () => {
-  const currentScroll = window.pageYOffset;
-  
-  if (currentScroll <= 0) {
-    header.style.boxShadow = 'none';
-  } else {
-    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
-  }
-  
-  lastScroll = currentScroll;
+  header.style.boxShadow = window.pageYOffset > 10
+    ? '0 2px 30px rgba(0,0,0,0.5)'
+    : 'none';
 });
 
-// Intersection Observer for animations
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
+// Intersection Observer
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate-in');
-      
-      // Animate progress bars
-      if (entry.target.classList.contains('skill-item')) {
-        const progressBar = entry.target.querySelector('.progress');
-        if (progressBar) {
-          const width = progressBar.getAttribute('data-width');
-          setTimeout(() => {
-            progressBar.style.width = width + '%';
-          }, 200);
-        }
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('animate-in');
+
+    // Animate skill bars
+    if (entry.target.classList.contains('skill-item')) {
+      const bar = entry.target.querySelector('.bar-fill');
+      if (bar) {
+        const w = bar.getAttribute('data-width');
+        setTimeout(() => { bar.style.width = w + '%'; }, 200);
       }
     }
   });
-}, observerOptions);
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-// Observe all sections and cards
-document.querySelectorAll('section, .project-card, .cert-card, .skill-item').forEach(el => {
+document.querySelectorAll('section, .proj-card, .cert-card, .skill-item').forEach(el => {
   observer.observe(el);
 });
 
-// Smooth scroll for navigation links
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
-      const headerOffset = 80;
-      const elementPosition = target.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
       window.scrollTo({
-        top: offsetPosition,
+        top: target.getBoundingClientRect().top + window.pageYOffset - 80,
         behavior: 'smooth'
       });
     }
   });
 });
 
-// Active nav link on scroll
+// Active nav on scroll
 const sections = document.querySelectorAll('section[id]');
-
 window.addEventListener('scroll', () => {
   let current = '';
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (pageYOffset >= sectionTop - 100) {
-      current = section.getAttribute('id');
-    }
+  sections.forEach(s => {
+    if (window.pageYOffset >= s.offsetTop - 120) current = s.getAttribute('id');
   });
-
   document.querySelectorAll('.nav-links a').forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
-      link.classList.add('active');
-    }
+    link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
   });
 });
 
-// Typing effect for hero title
-const typewriterText = document.querySelector('.typewriter');
-if (typewriterText) {
-  const text = typewriterText.textContent;
-  typewriterText.textContent = '';
+// Typewriter
+const tw = document.querySelector('.typewriter');
+if (tw) {
+  const text = tw.textContent;
+  tw.textContent = '';
   let i = 0;
-  
-  function typeWriter() {
-    if (i < text.length) {
-      typewriterText.textContent += text.charAt(i);
-      i++;
-      setTimeout(typeWriter, 100);
-    }
-  }
-  
-  setTimeout(typeWriter, 500);
+  const type = () => {
+    if (i < text.length) { tw.textContent += text[i++]; setTimeout(type, 85); }
+  };
+  setTimeout(type, 700);
 }
 
-// Add loading animation
-window.addEventListener('load', () => {
-  document.body.classList.add('loaded');
-});
-
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-  const scrolled = window.pageYOffset;
-  const hero = document.querySelector('.hero');
-  if (hero) {
-    hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-    hero.style.opacity = 1 - scrolled / 700;
-  }
-});
-
-// Copy email to clipboard
+// Copy email
 const emailLink = document.querySelector('a[href^="mailto:"]');
 if (emailLink) {
-  emailLink.addEventListener('click', (e) => {
+  emailLink.addEventListener('click', e => {
     e.preventDefault();
-    const email = emailLink.textContent;
-    navigator.clipboard.writeText(email).then(() => {
-      const originalText = emailLink.textContent;
-      emailLink.textContent = 'Email Copied!';
-      setTimeout(() => {
-        emailLink.textContent = originalText;
-      }, 2000);
+    navigator.clipboard.writeText(emailLink.textContent.trim()).then(() => {
+      const orig = emailLink.textContent;
+      emailLink.textContent = 'Copied!';
+      setTimeout(() => { emailLink.textContent = orig; }, 2000);
     });
   });
 }
+
+window.addEventListener('load', () => document.body.classList.add('loaded'));
