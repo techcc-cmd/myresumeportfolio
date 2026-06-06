@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sivasangar C — AI Engineer & Full-Stack Developer specializing in Java, Spring Boot, Agentic AI, and Multi-Agent Systems.">
+  <title>Sivasangar C | AI Engineer & Full-Stack Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Mouse Glow -->
+  <div class="mouse-glow"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">SC</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <span class="loader-text">Initializing AI Core...</span>
+    </div>
+  </div>
+
+  <!-- ─── NAVBAR ─── -->
+  <header id="navbar">
+    <nav>
+      <a href="#hero" class="logo">Sivasangar<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#timeline">Journey</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certs</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="resume.pdf" class="nav-resume" target="_blank"><i class="fas fa-download"></i> Resume</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <!-- ─── HERO ─── -->
+  <section id="hero" class="hero-section">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        <span>Available for Opportunities</span>
+      </div>
+      <h1 class="hero-title reveal-up">
+        <span class="hi-line">Hi, I'm</span>
+        <span class="name-line" id="typed-name">Sivasangar C</span>
+      </h1>
+      <div class="hero-roles reveal-up">
+        <span class="role-static">I build </span>
+        <span class="role-cycle" id="role-cycle"></span>
+      </div>
+      <p class="hero-desc reveal-up">
+        CS Student · AI &amp; ML Enthusiast · Agentic AI Developer · Spring Boot Full-Stack Engineer.
+        Building intelligent systems, scalable APIs, and autonomous AI workflows that push boundaries.
+      </p>
+      <div class="hero-ctas reveal-up">
+        <a href="#projects" class="btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
+        <a href="#contact" class="btn-ghost"><i class="fas fa-paper-plane"></i> Let's Talk</a>
+      </div>
+      <div class="hero-stats reveal-up">
+        <div class="hs"><span class="hs-n" data-target="10">0</span><span class="hs-l">Projects</span></div>
+        <div class="hs-sep"></div>
+        <div class="hs"><span class="hs-n" data-target="9">0</span><span class="hs-l">Certifications</span></div>
+        <div class="hs-sep"></div>
+        <div class="hs"><span class="hs-n" data-target="15">0</span><span class="hs-l">Technologies</span></div>
+        <div class="hs-sep"></div>
+        <div class="hs"><span class="hs-n" data-target="3">0</span><span class="hs-l">Hackathons</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal-right">
+      <div class="profile-orbit">
+        <div class="orbit-ring ring1"></div>
+        <div class="orbit-ring ring2"></div>
+        <div class="orbit-ring ring3"></div>
+        <div class="profile-frame">
+          <div class="profile-img"></div>
+          <div class="profile-status"><i class="fas fa-circle-check"></i> Open to Work</div>
+        </div>
+        <div class="orbit-node n1" data-tip="Java"><i class="fab fa-java"></i></div>
+        <div class="orbit-node n2" data-tip="Spring Boot"><i class="fas fa-leaf"></i></div>
+        <div class="orbit-node n3" data-tip="Python"><i class="fab fa-python"></i></div>
+        <div class="orbit-node n4" data-tip="React"><i class="fab fa-react"></i></div>
+        <div class="orbit-node n5" data-tip="AI/ML"><i class="fas fa-brain"></i></div>
+        <div class="orbit-node n6" data-tip="Docker"><i class="fab fa-docker"></i></div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-wheel"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="sec-label reveal-up">Who I Am</div>
+      <h2 class="sec-title reveal-up">About <span class="grad">Me</span></h2>
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <p>I'm a passionate Computer Science student and AI enthusiast who transforms complex problems into elegant, scalable solutions. My expertise spans <strong>Agentic AI</strong>, <strong>Multi-Agent Systems</strong>, <strong>Spring Boot Full-Stack</strong>, and building intelligent workflows that think autonomously.</p>
+          <p>I thrive at the intersection of AI and software engineering — architecting systems that don't just work, but <em>learn, adapt, and evolve</em>. From building neural network-powered applications to orchestrating multi-agent pipelines, I bring a builder's mindset to every challenge.</p>
+          <div class="about-tags">
+            <span>🎓 CS Student</span>
+            <span>🤖 Agentic AI Dev</span>
+            <span>⚡ Hackathon Participant</span>
+            <span>☕ Java Developer</span>
+            <span>🌱 Open Source</span>
+          </div>
+        </div>
+        <div class="stats-cards reveal-right">
+          <div class="stat-card sc1">
+            <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
+            <div class="stat-val" data-target="10">0</div>
+            <div class="stat-lbl">Projects Completed</div>
+            <div class="stat-bar"><div class="stat-bar-fill" style="width:83%"></div></div>
+          </div>
+          <div class="stat-card sc2">
+            <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+            <div class="stat-val" data-target="9">0</div>
+            <div class="stat-lbl">Certifications</div>
+            <div class="stat-bar"><div class="stat-bar-fill" style="width:75%"></div></div>
+          </div>
+          <div class="stat-card sc3">
+            <div class="stat-icon"><i class="fas fa-microchip"></i></div>
+            <div class="stat-val" data-target="15">0</div>
+            <div class="stat-lbl">Technologies</div>
+            <div class="stat-bar"><div class="stat-bar-fill" style="width:90%"></div></div>
+          </div>
+          <div class="stat-card sc4">
+            <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+            <div class="stat-val" data-target="3">0</div>
+            <div class="stat-lbl">Hackathons</div>
+            <div class="stat-bar"><div class="stat-bar-fill" style="width:60%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS GALAXY ─── -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="sec-label reveal-up">What I Know</div>
+      <h2 class="sec-title reveal-up">Skills <span class="grad">Galaxy</span></h2>
+      <p class="sec-sub reveal-up">Technologies orbiting the AI Core — hover to explore</p>
+      <div class="galaxy-wrap reveal-up">
+        <canvas id="galaxy-canvas"></canvas>
+        <div class="galaxy-legend">
+          <div class="legend-item"><span class="leg-dot" style="background:#38bdf8"></span>Languages</div>
+          <div class="legend-item"><span class="leg-dot" style="background:#a78bfa"></span>Frameworks</div>
+          <div class="legend-item"><span class="leg-dot" style="background:#34d399"></span>AI / ML</div>
+          <div class="legend-item"><span class="leg-dot" style="background:#f472b6"></span>DevOps / Cloud</div>
+        </div>
+      </div>
+      <div class="skill-pills reveal-up">
+        <span class="pill lang">Java</span><span class="pill lang">Python</span><span class="pill lang">JavaScript</span><span class="pill lang">C++</span><span class="pill lang">SQL</span>
+        <span class="pill fw">Spring Boot</span><span class="pill fw">React</span><span class="pill fw">FastAPI</span><span class="pill fw">LangChain</span><span class="pill fw">Spring AI</span>
+        <span class="pill ai">Machine Learning</span><span class="pill ai">Deep Learning</span><span class="pill ai">LangGraph</span><span class="pill ai">OpenAI API</span><span class="pill ai">Agentic AI</span>
+        <span class="pill devops">Docker</span><span class="pill devops">AWS</span><span class="pill devops">Azure</span><span class="pill devops">Git</span><span class="pill devops">PostgreSQL</span><span class="pill devops">MongoDB</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TIMELINE ─── -->
+  <section id="timeline" class="section">
+    <div class="container">
+      <div class="sec-label reveal-up">My Journey</div>
+      <h2 class="sec-title reveal-up">Learning <span class="grad">Timeline</span></h2>
+      <div class="timeline-wrap">
+        <div class="timeline-line"></div>
+        <div class="tl-item tl-left reveal-left">
+          <div class="tl-card">
+            <div class="tl-year">2023</div>
+            <h3>Started CS Journey</h3>
+            <p>Enrolled in Computer Science program. Dived into C, C++ fundamentals, algorithmic thinking, and core programming concepts.</p>
+            <div class="tl-tags"><span>C</span><span>C++</span><span>DSA</span></div>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item tl-right reveal-right">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-year">2023 – 2024</div>
+            <h3>Java & Full-Stack Development</h3>
+            <p>Mastered Java, OOP, Spring Boot, React, and PostgreSQL. Built production-grade applications and secure REST APIs with JWT authentication.</p>
+            <div class="tl-tags"><span>Java</span><span>Spring Boot</span><span>React</span><span>PostgreSQL</span><span>JWT</span></div>
+          </div>
+        </div>
+        <div class="tl-item tl-left reveal-left">
+          <div class="tl-card">
+            <div class="tl-year">2024</div>
+            <h3>AI & Machine Learning</h3>
+            <p>Entered the AI domain — Python, ML algorithms, Deep Learning, LangChain. Built first AI-powered applications and multi-agent systems.</p>
+            <div class="tl-tags"><span>Python</span><span>ML</span><span>LangChain</span><span>FastAPI</span></div>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item tl-right reveal-right">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-year">2025</div>
+            <h3>Agentic AI & Cloud</h3>
+            <p>Specializing in Multi-Agent Systems, Agentic AI workflows, LangGraph, and cloud deployment. Participating in hackathons and building AI-native products.</p>
+            <div class="tl-tags"><span>Agentic AI</span><span>LangGraph</span><span>AWS</span><span>Docker</span></div>
+          </div>
+          <div class="tl-dot active"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="sec-label reveal-up">What I've Built</div>
+      <h2 class="sec-title reveal-up">Featured <span class="grad">Projects</span></h2>
+      <p class="sec-sub reveal-up">Production-grade applications — click any card for full details</p>
+
+      <div class="proj-filters reveal-up">
+        <button class="pf-btn active" data-filter="all">All</button>
+        <button class="pf-btn" data-filter="featured">Featured</button>
+        <button class="pf-btn" data-filter="fullstack">Full-Stack</button>
+        <button class="pf-btn" data-filter="ai">AI / ML</button>
+        <button class="pf-btn" data-filter="embedded">Embedded</button>
+      </div>
+
+      <div class="proj-grid">
+
+        <div class="proj-card featured" data-cat="featured fullstack" data-id="tradesim" reveal-card>
+          <div class="pc-glow"></div>
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fas fa-chart-candlestick"></i></div>
+            <span class="pc-badge">⭐ Featured</span>
+          </div>
+          <h3 class="pc-title">TradeSim Pro</h3>
+          <p class="pc-sub">Stock Trading Simulator</p>
+          <p class="pc-desc">Production-ready virtual stock trading with ₹10L simulated capital, real-time price engine, tournaments & 30+ REST APIs.</p>
+          <div class="pc-stack"><span>Spring Boot</span><span>React 19</span><span>PostgreSQL</span><span>JWT</span></div>
+          <div class="pc-actions">
+            <a href="https://github.com/techcc-cmd/tradesim" target="_blank" class="pc-link"><i class="fab fa-github"></i></a>
+            <button class="pc-detail" data-id="tradesim">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="proj-card featured" data-cat="featured ai" data-id="multiagent" reveal-card>
+          <div class="pc-glow"></div>
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fas fa-brain"></i></div>
+            <span class="pc-badge">⭐ Featured</span>
+          </div>
+          <h3 class="pc-title">Multi-Agent AI System</h3>
+          <p class="pc-sub">Autonomous Workflow Engine</p>
+          <p class="pc-desc">Sophisticated multi-agent architecture with LangChain, autonomous task delegation, context-aware routing & Redis memory.</p>
+          <div class="pc-stack"><span>Python</span><span>FastAPI</span><span>LangChain</span><span>Redis</span></div>
+          <div class="pc-actions">
+            <a href="#" class="pc-link"><i class="fab fa-github"></i></a>
+            <button class="pc-detail" data-id="multiagent">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="proj-card featured" data-cat="featured fullstack" data-id="myntra" reveal-card>
+          <div class="pc-glow"></div>
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fas fa-bag-shopping"></i></div>
+            <span class="pc-badge">⭐ Featured</span>
+          </div>
+          <h3 class="pc-title">Myntra Clone</h3>
+          <p class="pc-sub">E-Commerce Platform</p>
+          <p class="pc-desc">Full-featured e-commerce with Razorpay payments, dynamic catalog, cart/wishlist & complete order lifecycle management.</p>
+          <div class="pc-stack"><span>Spring Boot</span><span>JSP</span><span>PostgreSQL</span><span>Razorpay</span></div>
+          <div class="pc-actions">
+            <a href="#" class="pc-link"><i class="fab fa-github"></i></a>
+            <button class="pc-detail" data-id="myntra">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="proj-card" data-cat="featured fullstack" data-id="portfolio-cms" reveal-card>
+          <div class="pc-glow"></div>
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fas fa-id-card"></i></div>
+            <span class="pc-badge">⭐ Featured</span>
+          </div>
+          <h3 class="pc-title">Dynamic Portfolio CMS</h3>
+          <p class="pc-sub">Admin-Driven Personal Site</p>
+          <p class="pc-desc">Database-driven portfolio with secure admin panel for real-time content management — no code changes needed.</p>
+          <div class="pc-stack"><span>Spring Boot</span><span>JSP</span><span>PostgreSQL</span></div>
+          <div class="pc-actions">
+            <a href="https://github.com/techcc-cmd/Myproject" target="_blank" class="pc-link"><i class="fab fa-github"></i></a>
+            <button class="pc-detail" data-id="portfolio-cms">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="proj-card" data-cat="fullstack" data-id="course-mgmt" reveal-card>
+          <div class="pc-glow"></div>
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fas fa-graduation-cap"></i></div>
+          </div>
+          <h3 class="pc-title">Course Management System</h3>
+          <p class="pc-sub">EdTech Platform</p>
+          <p class="pc-desc">Role-based LMS with instructor course publishing, student enrollment, progress tracking & JWT-secured APIs.</p>
+          <div class="pc-stack"><span>React</span><span>Spring Boot</span><span>PostgreSQL</span><span>JWT</span></div>
+          <div class="pc-actions">
+            <a href="https://github.com/techcc-cmd/course_management_System" target="_blank" class="pc-link"><i class="fab fa-github"></i></a>
+            <button class="pc-detail" data-id="course-mgmt">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="proj-card" data-cat="ai fullstack" data-id="ai-resume" reveal-card>
+          <div class="pc-glow"></div>
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fas fa-file-waveform"></i></div>
+          </div>
+          <h3 class="pc-title">AI Resume Analyzer</h3>
+          <p class="pc-sub">ATS Intelligence Tool</p>
+          <p class="pc-desc">OpenAI-powered resume analysis with ATS scoring, skill extraction & improvement suggestions against job descriptions.</p>
+          <div class="pc-stack"><span>Spring AI</span><span>React</span><span>OpenAI API</span><span>PostgreSQL</span></div>
+          <div class="pc-actions">
+            <a href="#" class="pc-link"><i class="fab fa-github"></i></a>
+            <button class="pc-detail" data-id="ai-resume">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="proj-card" data-cat="embedded" data-id="uart" reveal-card>
+          <div class="pc-glow"></div>
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fas fa-microchip"></i></div>
+          </div>
+          <h3 class="pc-title">Serial Communication</h3>
+          <p class="pc-sub">ATmega32 Embedded System</p>
+          <p class="pc-desc">UART bidirectional communication between ATmega32 and PC. Simulated in Proteus with low-level Embedded C.</p>
+          <div class="pc-stack"><span>C</span><span>ATmega32</span><span>Proteus</span><span>Keil</span></div>
+          <div class="pc-actions">
+            <a href="https://github.com/techcc-cmd/" target="_blank" class="pc-link"><i class="fab fa-github"></i></a>
+            <button class="pc-detail" data-id="uart">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- AI Network Graph -->
+      <div class="network-section reveal-up">
+        <h3 class="net-title">AI Projects <span class="grad">Network</span></h3>
+        <p class="net-sub">Interactive dependency graph — hover nodes to explore connections</p>
+        <canvas id="network-canvas"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CERTIFICATIONS ─── -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <div class="sec-label reveal-up">Credentials</div>
+      <h2 class="sec-title reveal-up">Certifications</h2>
+      <div class="cert-grid">
+        <div class="cert-card reveal-card"><div class="cert-ico"><i class="fab fa-git-alt"></i></div><h4>Git and GitHub</h4><p>Geekster</p></div>
+        <div class="cert-card reveal-card"><div class="cert-ico"><i class="fab fa-microsoft"></i></div><h4>Migrate SQL Server to Azure SQL</h4><p>Microsoft</p></div>
+        <div class="cert-card reveal-card"><div class="cert-ico"><i class="fas fa-network-wired"></i></div><h4>Networking Fundamentals</h4><p>Cisco</p></div>
+        <div class="cert-card reveal-card"><div class="cert-ico"><i class="fab fa-python"></i></div><h4>Python Development Internship</h4><p>Oasis Infobyte</p></div>
+        <div class="cert-card reveal-card"><div class="cert-ico"><i class="fas fa-robot"></i></div><h4>Generative AI Fundamentals</h4><p>LinkedIn Learning</p></div>
+        <div class="cert-card reveal-card"><div class="cert-ico"><i class="fas fa-shield-halved"></i></div><h4>Cybersecurity Analyst Job Simulation</h4><p>TATA · Forage</p></div>
+        <div class="cert-card reveal-card"><div class="cert-ico"><i class="fas fa-chart-column"></i></div><h4>Data Analytics &amp; Visualization</h4><p>Accenture · Forage</p></div>
+        <div class="cert-card reveal-card"><div class="cert-ico"><i class="fab fa-microsoft"></i></div><h4>Active Directory Domain Services</h4><p>Microsoft Applied Skills</p></div>
+        <div class="cert-card reveal-card"><div class="cert-ico"><i class="fas fa-cloud"></i></div><h4>Azure Files &amp; Blob Storage</h4><p>Microsoft Applied Skills</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="sec-label reveal-up">Get In Touch</div>
+      <h2 class="sec-title reveal-up">Let's <span class="grad">Connect</span></h2>
+      <div class="contact-grid">
+        <div class="contact-left reveal-left">
+          <p>Open to full-time roles, internships, and exciting projects. Whether you're from Google, Amazon, Microsoft, OpenAI, or a bold startup — let's build something incredible together.</p>
+          <div class="contact-items">
+            <a href="mailto:sivasangarc091@gmail.com" class="contact-item">
+              <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+              <div><h4>Email</h4><span>sivasangarc091@gmail.com</span></div>
+            </a>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-phone"></i></div>
+              <div><h4>Phone</h4><span>+91 90252 36196</span></div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-map-pin"></i></div>
+              <div><h4>Location</h4><span>India — Open to Remote</span></div>
+            </div>
+          </div>
+          <a href="resume.pdf" download class="btn-primary resume-btn"><i class="fas fa-download"></i> Download Resume</a>
+        </div>
+        <div class="contact-right reveal-right">
+          <div class="social-grid">
+            <a href="https://www.linkedin.com/in/sivasangar-c-a921b8290/" target="_blank" class="soc-card sc-linkedin">
+              <i class="fab fa-linkedin"></i><span>LinkedIn</span><small>Connect</small>
+            </a>
+            <a href="https://github.com/techcc-cmd/" target="_blank" class="soc-card sc-github">
+              <i class="fab fa-github"></i><span>GitHub</span><small>10+ Repos</small>
+            </a>
+            <a href="https://leetcode.com/u/SivasangarC2005" target="_blank" class="soc-card sc-lc">
+              <i class="fas fa-code"></i><span>LeetCode</span><small>Problem Solver</small>
+            </a>
+            <a href="https://www.codechef.com/users/thehacker77" target="_blank" class="soc-card sc-cc">
+              <i class="fas fa-utensils"></i><span>CodeChef</span><small>Competitive</small>
+            </a>
+          </div>
+          <div class="availability-card">
+            <div class="avail-dot"></div>
+            <div>
+              <h4>Currently Available</h4>
+              <p>Open to new opportunities starting immediately</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <div class="logo">Sivasangar<span>.</span></div>
+        <p>AI Engineer & Full-Stack Developer<br>Building the future with code and intelligence.</p>
+      </div>
+      <div class="footer-col"><h5>Navigate</h5>
+        <a href="#about">About</a><a href="#skills">Skills</a>
+        <a href="#timeline">Journey</a><a href="#projects">Projects</a>
+        <a href="#certifications">Certs</a><a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col"><h5>Connect</h5>
+        <a href="https://www.linkedin.com/in/sivasangar-c-a921b8290/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/techcc-cmd/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="mailto:sivasangarc091@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Sivasangar C · Crafted with passion, precision &amp; AI.</p></div>
+  </footer>
+
+  <!-- ─── PROJECT MODAL ─── -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-box" id="modal-box">
+      <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- ─── AI CHATBOT ─── -->
+  <div class="chatbot-fab" id="chatbot-fab" title="AI Assistant">
+    <i class="fas fa-robot"></i>
+    <span class="fab-pulse"></span>
+  </div>
+  <div class="chatbot-panel" id="chatbot-panel">
+    <div class="chat-header">
+      <div class="chat-avatar"><i class="fas fa-robot"></i></div>
+      <div><h4>AI Assistant</h4><small>Portfolio Navigator</small></div>
+      <button id="chat-close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-msg bot">Hi! I'm your AI portfolio guide. Ask me anything about Sivasangar's projects, skills, or experience! 🤖</div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask about projects, skills...">
+      <button id="chat-send"><i class="fas fa-paper-plane"></i></button>
+    </div>
+    <div class="chat-suggestions">
+      <button class="chat-sug" data-q="What are your best projects?">Best projects?</button>
+      <button class="chat-sug" data-q="What AI skills do you have?">AI skills?</button>
+      <button class="chat-sug" data-q="How to contact you?">Contact?</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
